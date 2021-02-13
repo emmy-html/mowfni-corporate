@@ -84,6 +84,9 @@ textarea {
 @font-face {
   font-family: Poppins;
   src: url(/fonts/Poppins-Regular.ttf); }
+html {
+  scroll-behavior: smooth; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif; }
 
@@ -93,6 +96,106 @@ body {
 .content-wrapper {
   margin: 0px 20px; }
 
+/* hamburger menu */
+header {
+  background: #003952;
+  position: sticky;
+  top: 0; }
+  header .content-wrapper {
+    display: flex;
+    /* turn our content wrapper into a flex container, taking advantage of the default flex-direction: row, which causes items to align side by side */
+    justify-content: space-between;
+    align-items: center; }
+    header .content-wrapper img {
+      height: 75px;
+      width: auto; }
+    header .content-wrapper i {
+      color: #a9cf38; }
+
+.hide-menu {
+  display: none;
+  /* hide navigation menu by default */ }
+
+.fade-in {
+  animation: fadeIn .5s 1; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+nav {
+  background: #003952;
+  width: 100%;
+  position: absolute;
+  /* absolute positioning will stop the menu from disrupting the flow of the page */
+  margin: 0px !important;
+  top: 0;
+  left: 0; }
+  nav ul {
+    list-style-type: none;
+    padding: 15px 10px 0px 0px !important;
+    /* override any padding that would throw off the layout of the menu */ }
+    nav ul li {
+      margin-bottom: 5px;
+      text-align: center; }
+      nav ul li a:link,
+      nav ul li a:visited {
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 300;
+        text-decoration: none;
+        text-transform: uppercase; }
+        nav ul li a:link:hover,
+        nav ul li a:visited:hover {
+          color: #a9cf38;
+          transition: .3s color; }
+
+#menu-toggle-button {
+  z-index: 999;
+  /* make sure the menu button stays on top */ }
+
+/* return to MOWFNI topbar */
+.top-bar {
+  background: #a9cf38;
+  z-index: 999; }
+  .top-bar .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .top-bar .content-wrapper a:link,
+    .top-bar .content-wrapper a:visited {
+      color: #003952;
+      font-size: 1rem;
+      text-decoration: none;
+      text-transform: uppercase; }
+  .top-bar:hover {
+    background: #00b5c2;
+    transition: .3s background-color; }
+
+/* media queries for displaying our menu properly on large screens */
+@media screen and (min-width: 768px) {
+  .hide-menu {
+    display: block !important;
+    /* override hidden navigation on large screens */ }
+
+  #menu-toggle-button {
+    display: none;
+    /* hide hamburger button */ }
+
+  nav {
+    background: none;
+    left: auto;
+    right: 20px;
+    /* use absolute positioning to push links to right side of container */
+    width: auto;
+    /* reset width */ }
+    nav ul li {
+      display: inline-block;
+      /* display links side by side */
+      margin-top: 10px;
+      margin-left: 20px; } }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
