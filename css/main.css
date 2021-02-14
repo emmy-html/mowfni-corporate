@@ -84,6 +84,7 @@ textarea {
 @font-face {
   font-family: Poppins;
   src: url(/fonts/Poppins-Regular.ttf); }
+/* adjust top of sections to compensate for padding when jumping from section to section */
 html {
   scroll-behavior: smooth; }
 
@@ -100,7 +101,9 @@ body {
 header {
   background: #003952;
   position: sticky;
-  top: 0; }
+  top: 0;
+  height: 90px;
+  width: 100%; }
   header .content-wrapper {
     display: flex;
     /* turn our content wrapper into a flex container, taking advantage of the default flex-direction: row, which causes items to align side by side */
@@ -173,6 +176,38 @@ nav {
   .top-bar:hover {
     background: #00b5c2;
     transition: .3s background-color; }
+
+/* adjust the top of all sections to compensate for header */
+#hero, #spotlight, #volunteer, #faq {
+  padding-top: 90px; }
+
+/* hero */
+#hero {
+  background: url("../img/hero.png") center/cover;
+  height: 350px; }
+  #hero .hero-content {
+    color: #fff; }
+    #hero .hero-content h1 {
+      font-size: 1.4rem;
+      line-height: 1.65rem;
+      text-align: center;
+      text-transform: uppercase; }
+      #hero .hero-content h1 span {
+        display: block; }
+        #hero .hero-content h1 span:nth-of-type(2) {
+          font-weight: 300; }
+    #hero .hero-content .hero-description {
+      padding-top: 10px;
+      text-align: center; }
+      #hero .hero-content .hero-description p {
+        line-height: 1.20rem;
+        padding-top: 5px; }
+      #hero .hero-content .hero-description i {
+        color: #fff;
+        padding-top: 30px; }
+        #hero .hero-content .hero-description i:hover {
+          color: #a9cf38;
+          transition: .3s color; }
 
 /* media queries for displaying our menu properly on large screens */
 @media screen and (min-width: 768px) {

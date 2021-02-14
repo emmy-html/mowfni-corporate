@@ -115,6 +115,8 @@
     background: $dark-blue;
     position: sticky;
     top: 0;
+    height: 90px;
+    width: 100%;
     .content-wrapper {
       display: flex; /* turn our content wrapper into a flex container, taking advantage of the default flex-direction: row, which causes items to align side by side */ 
       justify-content: space-between;
@@ -193,6 +195,46 @@
     &:hover {
       background: $light-blue;
       transition: .3s background-color;
+    }
+  }
+  /* adjust the top of all sections to compensate for header */
+  #hero, #spotlight, #volunteer, #faq {
+    @include adjustment-padding;
+  }
+  /* hero */ 
+  #hero {
+    background: url('../img/hero.png') center / cover;
+    height: 350px;
+    .hero-content {
+      color: #fff;
+      h1 {
+        font-size: 1.4rem;
+        line-height: 1.65rem;
+        text-align: center;
+        text-transform: uppercase;
+        span {
+          display: block;
+          &:nth-of-type(2) {
+            font-weight: $light;
+          }
+        }
+      }
+      .hero-description {
+        padding-top: 10px;
+        text-align: center;
+        p {
+          line-height: 1.20rem;
+          padding-top: 5px;
+        }
+        i {
+          color: #fff;
+          padding-top: 30px;
+          &:hover {
+            color: $lime-green;
+            transition: .3s color;
+          }
+        }
+      }
     }
   }
   /* media queries for displaying our menu properly on large screens */ 

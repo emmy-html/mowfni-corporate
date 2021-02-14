@@ -1,0 +1,4 @@
+/* adjust top of sections to compensate for padding when jumping from section to section */ 
+@mixin adjustment-padding {
+    padding-top: 90px;
+}
