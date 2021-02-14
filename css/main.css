@@ -86,10 +86,12 @@ textarea {
   src: url(/fonts/Poppins-Regular.ttf); }
 /* adjust top of sections to compensate for padding when jumping from section to section */
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  margin: 0px !important; }
 
 body {
   font-family: "Lato", sans-serif; }
@@ -176,10 +178,6 @@ nav {
   .top-bar:hover {
     background: #00b5c2;
     transition: .3s background-color; }
-
-/* adjust the top of all sections to compensate for header */
-#hero, #spotlight, #volunteer, #faq {
-  padding-top: 90px; }
 
 /* hero */
 #hero {
