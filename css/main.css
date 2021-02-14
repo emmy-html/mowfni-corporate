@@ -14,14 +14,14 @@ html {
   line-height: 1.4; }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
@@ -31,8 +31,8 @@ html {
   text-shadow: none; }
 
 /*
- * A better looking default horizontal rule
- */
+   * A better looking default horizontal rule
+   */
 hr {
   display: block;
   height: 1px;
@@ -42,10 +42,10 @@ hr {
   padding: 0; }
 
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
 audio,
 canvas,
 iframe,
@@ -55,22 +55,22 @@ video {
   vertical-align: middle; }
 
 /*
- * Remove default fieldset styles.
- */
+   * Remove default fieldset styles.
+   */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
 
 /*
- * Allow only vertical resizing of textareas.
- */
+   * Allow only vertical resizing of textareas.
+   */
 textarea {
   resize: vertical; }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+     Browser Upgrade Prompt
+     ========================================================================== */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -90,9 +90,19 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
   margin: 0px !important; }
+
+h1 {
+  text-transform: uppercase; }
+  h1 span {
+    display: block; }
 
 p {
   margin: 0px !important; }
@@ -130,7 +140,8 @@ header {
   position: sticky;
   top: 0;
   height: 90px;
-  width: 100%; }
+  width: 100%;
+  z-index: 999; }
   header .content-wrapper {
     display: flex;
     /* turn our content wrapper into a flex container, taking advantage of the default flex-direction: row, which causes items to align side by side */
@@ -147,7 +158,7 @@ header {
   /* hide navigation menu by default */ }
 
 .fade-in {
-  animation: fadeIn .5s 1; }
+  animation: fadeIn 0.5s 1; }
 
 @keyframes fadeIn {
   from {
@@ -180,7 +191,7 @@ nav {
         nav ul li a:link:hover,
         nav ul li a:visited:hover {
           color: #a9cf38;
-          transition: .3s color; }
+          transition: 0.3s color; }
 
 #menu-toggle-button {
   z-index: 999;
@@ -202,7 +213,7 @@ nav {
       text-transform: uppercase; }
   .top-bar:hover {
     background: #00b5c2;
-    transition: .3s background-color; }
+    transition: 0.3s background-color; }
 
 /* hero */
 #hero {
@@ -216,31 +227,28 @@ nav {
       padding-top: 50px;
       text-align: center;
       text-transform: uppercase; }
-      #hero .hero-content h1 span {
-        display: block; }
-        #hero .hero-content h1 span:nth-of-type(2) {
-          font-weight: 300; }
+      #hero .hero-content h1 span:nth-of-type(2) {
+        font-weight: 300; }
     #hero .hero-content .hero-description {
       padding-top: 10px;
       text-align: center; }
       #hero .hero-content .hero-description p {
-        line-height: 1.20rem;
+        line-height: 1.2rem;
         padding: 10px 0px; }
       #hero .hero-content .hero-description i {
         color: #fff;
         padding-top: 20px; }
         #hero .hero-content .hero-description i:hover {
           color: #a9cf38;
-          transition: .3s color; }
+          transition: 0.3s color; }
 
+/* volunteer opportunities */
 #volunteer {
-  color: #003952;
-  /* volunteer opportunities */ }
+  color: #003952; }
   #volunteer h1 {
     line-height: 1.75rem;
     padding: 20px 0px;
-    text-align: center;
-    text-transform: uppercase; }
+    text-align: center; }
     #volunteer h1 span {
       font-weight: 300; }
   #volunteer .volunteer-opp {
@@ -256,37 +264,59 @@ nav {
       #volunteer .volunteer-opp div h3 {
         font-size: 1rem; }
       #volunteer .volunteer-opp div img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
         width: 250px;
         height: auto;
-        padding: 10px 0px; }
+        padding: 10px 0px;
+        transition: .3s filter; }
       #volunteer .volunteer-opp div:not(:nth-of-type(1)) {
         padding-top: 20px; }
+      #volunteer .volunteer-opp div:hover img {
+        filter: none;
+        transition: .3s filter; }
+    #volunteer .volunteer-opp .button-container.volunteer-opp-button {
+      padding-bottom: 0px !important; }
   #volunteer .button-container {
     padding-bottom: 20px; }
 
-#impact {
-  /* statistic/impact section */ }
-  #impact .volunteer-impact {
-    background: url("../img/impact-hero.png") center/cover;
-    color: #fff;
-    padding: 10px 0px; }
-    #impact .volunteer-impact h1 {
-      padding: 10px 0px;
-      text-align: center; }
-      #impact .volunteer-impact h1 span {
-        font-weight: 300; }
-    #impact .volunteer-impact .volunteer-stats {
+/* statistic/impact section */
+#impact .volunteer-impact {
+  background: url("../img/impact-hero.png") center/cover;
+  color: #fff;
+  padding: 10px 0px; }
+  #impact .volunteer-impact h1 {
+    padding: 10px 0px;
+    text-align: left; }
+    #impact .volunteer-impact h1 span {
+      display: inline-block;
+      font-weight: 300; }
+  #impact .volunteer-impact .volunteer-stats {
+    padding-top: 10px; }
+    #impact .volunteer-impact .volunteer-stats h3 {
+      font-size: 3.5rem;
+      line-height: 2.5rem;
       padding-top: 10px; }
-      #impact .volunteer-impact .volunteer-stats h3 {
-        font-size: 3.5rem;
-        line-height: 2.5rem;
-        padding-top: 10px; }
-        #impact .volunteer-impact .volunteer-stats h3 span {
-          display: block;
-          font-size: 1.25rem;
-          font-weight: 300; }
+      #impact .volunteer-impact .volunteer-stats h3 span {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 300; }
+  #impact .volunteer-impact .button-container {
+    text-align: left; }
+    #impact .volunteer-impact .button-container a:link:hover,
+    #impact .volunteer-impact .button-container a:visited:hover {
+      border: 3px solid #fff;
+      color: #fff; }
 
-/* media queries for displaying our menu properly on large screens */
+/* partner spotlight */
+#spotlight h1 {
+  line-height: 1.75rem;
+  padding: 20px 0px;
+  text-align: center; }
+  #spotlight h1 span {
+    font-weight: 300; }
+
+/* desktop & tablet styles */
 @media screen and (min-width: 768px) {
   .hide-menu {
     display: block !important;
@@ -309,22 +339,22 @@ nav {
       margin-top: 10px;
       margin-left: 20px; } }
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+     Helper classes
+     ========================================================================== */
 /*
- * Hide visually and from screen readers
- */
+   * Hide visually and from screen readers
+   */
 .hidden {
   display: none !important; }
 
 /*
-* Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*
-* 1. For long content, line feeds are not interpreted as spaces and small width
-*    causes content to wrap 1 word per line:
-*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-*/
+  * Hide only visually, but have it available for screen readers:
+  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  *
+  * 1. For long content, line feeds are not interpreted as spaces and small width
+  *    causes content to wrap 1 word per line:
+  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  */
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -338,10 +368,10 @@ nav {
   /* 1 */ }
 
 /*
-* Extends the .sr-only class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
+  * Extends the .sr-only class to allow the element
+  * to be focusable when navigated to via the keyboard:
+  * https://www.drupal.org/node/897638
+  */
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -353,22 +383,22 @@ nav {
   width: auto; }
 
 /*
-* Hide visually and from screen readers, but maintain layout
-*/
+  * Hide visually and from screen readers, but maintain layout
+  */
 .invisible {
   visibility: hidden; }
 
 /*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -380,19 +410,19 @@ nav {
   clear: both; }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */ }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
 @media print {
   *,
   *:before,
@@ -414,9 +444,9 @@ nav {
     content: " (" attr(title) ")"; }
 
   /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
@@ -430,9 +460,9 @@ nav {
     page-break-inside: avoid; }
 
   /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
   thead {
     display: table-header-group; }
 

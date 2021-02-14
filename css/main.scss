@@ -11,13 +11,13 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-   html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-  }
-  
-  /*
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
    * Remove text-shadow in selection highlight:
    * https://twitter.com/miketaylr/status/12228805301
    *
@@ -26,325 +26,369 @@
    *
    * Customize the background color to match your design.
    */
-  
-  ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-  }
-  
-  ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-  }
-  
-  /*
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
    * A better looking default horizontal rule
    */
-  
-  hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-  }
-  
-  /*
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
    * Remove the gap between audio, canvas, iframes,
    * images, videos and the bottom of their containers:
    * https://github.com/h5bp/html5-boilerplate/issues/440
    */
-  
-  audio,
-  canvas,
-  iframe,
-  img,
-  svg,
-  video {
-    vertical-align: middle;
-  }
-  
-  /*
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
    * Remove default fieldset styles.
    */
-  
-  fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /*
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
    * Allow only vertical resizing of textareas.
    */
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  /* ==========================================================================
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
      Browser Upgrade Prompt
      ========================================================================== */
-  
-  .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* universal styles */
+@import "fonts";
+@import "colors";
+@import "mixins";
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  margin: 0px !important;
+}
+h1 {
+  text-transform: uppercase;
+  span {
+    display: block;
   }
-  
-  /* universal styles */
-  @import "fonts";
-  @import "colors";
-  @import "mixins";
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-font;
-    margin: 0px !important;
-  }
-  p {
-    margin: 0px !important;
-  }
-  body {
-    font-family: $body-font;
-  }
+}
+p {
+  margin: 0px !important;
+}
+body {
+  font-family: $body-font;
+}
+.content-wrapper {
+  margin: 0px 20px;
+}
+.button-container {
+  @include pill-button;
+}
+/* hamburger menu */
+header {
+  background: $dark-blue;
+  position: sticky;
+  top: 0;
+  height: 90px;
+  width: 100%;
+  z-index: 999;
   .content-wrapper {
-    margin: 0px 20px;
-  }
-  .button-container {
-    @include pill-button;
-  }
-  /* hamburger menu */ 
-  header {
-    background: $dark-blue;
-    position: sticky;
-    top: 0;
-    height: 90px;
-    width: 100%;
-    .content-wrapper {
-      display: flex; /* turn our content wrapper into a flex container, taking advantage of the default flex-direction: row, which causes items to align side by side */ 
-      justify-content: space-between;
-      align-items: center;
-      img {
-        height: 75px;
-        width: auto;
-      }
-      i {
-        color: $lime-green;
-      }
+    display: flex; /* turn our content wrapper into a flex container, taking advantage of the default flex-direction: row, which causes items to align side by side */
+    justify-content: space-between;
+    align-items: center;
+    img {
+      height: 75px;
+      width: auto;
+    }
+    i {
+      color: $lime-green;
     }
   }
-  .hide-menu {
-    display: none; /* hide navigation menu by default */
+}
+.hide-menu {
+  display: none; /* hide navigation menu by default */
+}
+.fade-in {
+  animation: fadeIn 0.5s 1;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  .fade-in {
-    animation: fadeIn .5s 1;
+  to {
+    opacity: 1;
   }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  nav {
-    background: $dark-blue;
-    width: 100%;
-    position: absolute; /* absolute positioning will stop the menu from disrupting the flow of the page */
-    margin: 0px !important;
-    top: 0;
-    left: 0;
-    ul {
-      list-style-type: none;
-      padding: 15px 10px 0px 0px !important; /* override any padding that would throw off the layout of the menu */
-      li {
-        margin-bottom: 5px;
-        text-align: center;
-        a:link,
-        a:visited {
-          color: #fff;
-          font-family: $heading-font;
-          font-size: 1.25rem;
-          font-weight: $light;
-          text-decoration: none;
-          text-transform: uppercase;
-          &:hover {
-            color: $lime-green;
-            transition: .3s color;
-          }
-        }
-      }
-    }
-  }
-  #menu-toggle-button {
-    z-index: 999; /* make sure the menu button stays on top */
-  }
-  /* return to MOWFNI topbar */ 
-  .top-bar {
-    background: $lime-green;
-    z-index: 999;
-    .content-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+}
+nav {
+  background: $dark-blue;
+  width: 100%;
+  position: absolute; /* absolute positioning will stop the menu from disrupting the flow of the page */
+  margin: 0px !important;
+  top: 0;
+  left: 0;
+  ul {
+    list-style-type: none;
+    padding: 15px 10px 0px 0px !important; /* override any padding that would throw off the layout of the menu */
+    li {
+      margin-bottom: 5px;
+      text-align: center;
       a:link,
       a:visited {
-        color: $dark-blue;
-        font-size: 1rem;
+        color: #fff;
+        font-family: $heading-font;
+        font-size: 1.25rem;
+        font-weight: $light;
         text-decoration: none;
         text-transform: uppercase;
-      }
-    }
-    &:hover {
-      background: $light-blue;
-      transition: .3s background-color;
-    }
-  }
-  /* hero */ 
-  #hero {
-    background: url('../img/hero.png') center / cover;
-    height: 350px;
-    .hero-content {
-      color: #fff;
-      h1 {
-        font-size: 1.4rem;
-        line-height: 1.65rem;
-        padding-top: 50px;
-        text-align: center;
-        text-transform: uppercase;
-        span {
-          display: block;
-          &:nth-of-type(2) {
-            font-weight: $light;
-          }
-        }
-      }
-      .hero-description {
-        padding-top: 10px;
-        text-align: center;
-        p {
-          line-height: 1.20rem;
-          padding: 10px 0px;
-        }
-        i {
-          color: #fff;
-          padding-top: 20px;
-          &:hover {
-            color: $lime-green;
-            transition: .3s color;
-          }
+        &:hover {
+          color: $lime-green;
+          transition: 0.3s color;
         }
       }
     }
   }
-  #volunteer {
-    color: $dark-blue;
-    /* volunteer opportunities */ 
+}
+#menu-toggle-button {
+  z-index: 999; /* make sure the menu button stays on top */
+}
+/* return to MOWFNI topbar */
+.top-bar {
+  background: $lime-green;
+  z-index: 999;
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a:link,
+    a:visited {
+      color: $dark-blue;
+      font-size: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+  &:hover {
+    background: $light-blue;
+    transition: 0.3s background-color;
+  }
+}
+/* hero */
+#hero {
+  background: url("../img/hero.png") center / cover;
+  height: 350px;
+  .hero-content {
+    color: #fff;
     h1 {
-      line-height: 1.75rem;
-      padding: 20px 0px;
+      font-size: 1.4rem;
+      line-height: 1.65rem;
+      padding-top: 50px;
       text-align: center;
       text-transform: uppercase;
       span {
+        &:nth-of-type(2) {
+          font-weight: $light;
+        }
+      }
+    }
+    .hero-description {
+      padding-top: 10px;
+      text-align: center;
+      p {
+        line-height: 1.2rem;
+        padding: 10px 0px;
+      }
+      i {
+        color: #fff;
+        padding-top: 20px;
+        &:hover {
+          color: $lime-green;
+          transition: 0.3s color;
+        }
+      }
+    }
+  }
+}
+/* volunteer opportunities */
+#volunteer {
+  color: $dark-blue;
+  h1 {
+    line-height: 1.75rem;
+    padding: 20px 0px;
+    text-align: center;
+    span {
+      font-weight: $light;
+    }
+  }
+  .volunteer-opp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* container for each opportunity */
+    div {
+      text-align: center;
+      h2 {
+        font-size: 1.25rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+      img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        width: 250px;
+        height: auto;
+        padding: 10px 0px;
+        transition: .3s filter;
+      }
+      &:not(:nth-of-type(1)) {
+        padding-top: 20px;
+      }
+      &:hover {
+        img {
+          filter: none;
+          transition: .3s filter;
+        }
+      }
+    }
+    .button-container.volunteer-opp-button {
+      padding-bottom: 0px !important;
+    }
+  }
+  .button-container {
+    padding-bottom: 20px;
+  }
+}
+/* statistic/impact section */
+#impact {
+  .volunteer-impact {
+    background: url("../img/impact-hero.png") center / cover;
+    color: #fff;
+    padding: 10px 0px;
+    h1 {
+      padding: 10px 0px;
+      text-align: left;
+      span {
+        display: inline-block;
         font-weight: $light;
       }
     }
-    .volunteer-opp {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      /* container for each opportunity */ 
-      div {
-        text-align: center;
-        h2 {
+    .volunteer-stats {
+      padding-top: 10px;
+      h3 {
+        font-size: 3.5rem;
+        line-height: 2.5rem;
+        padding-top: 10px;
+        span {
+          display: block;
           font-size: 1.25rem;
-        }
-        h3 {
-          font-size: 1rem;
-        }
-        img {
-          width: 250px;
-          height: auto;
-          padding: 10px 0px;
-        }
-        &:not(:nth-of-type(1)) {
-          padding-top: 20px;
+          font-weight: $light;
         }
       }
     }
     .button-container {
-      padding-bottom: 20px;
-    }
-  }
-  #impact {
-        /* statistic/impact section */
-        .volunteer-impact {
-          background: url('../img/impact-hero.png') center / cover;
+      text-align: left;
+      a:link,
+      a:visited {
+        &:hover {
+          border: 3px solid #fff;
           color: #fff;
-          padding: 10px 0px;
-          h1 {
-            padding: 10px 0px;
-            text-align: center;
-            span {
-              font-weight: $light;
-            }
-          }
-          .volunteer-stats {
-            padding-top: 10px;
-            h3 {
-              font-size: 3.5rem;
-              line-height: 2.5rem;
-              padding-top: 10px;
-              span {
-                display: block;
-                font-size: 1.25rem;
-                font-weight: $light;
-              }
-            }
-          }
-        }
-  }
-  /* media queries for displaying our menu properly on large screens */ 
-  @media screen and (min-width: 768px) {
-    .hide-menu {
-      display: block !important; /* override hidden navigation on large screens */ 
-    }
-    #menu-toggle-button {
-      display: none; /* hide hamburger button */
-    }
-    nav {
-      background: none;
-      left: auto; 
-      right: 20px; /* use absolute positioning to push links to right side of container */
-      width: auto; /* reset width */ 
-      ul {
-        li {
-          display: inline-block; /* display links side by side */ 
-          margin-top: 10px;
-          margin-left: 20px;
         }
       }
     }
   }
-  /* ==========================================================================
+}
+/* partner spotlight */ 
+#spotlight {
+  h1 {
+    line-height: 1.75rem;
+    padding: 20px 0px;
+    text-align: center;
+    span {
+      font-weight: $light;
+    }
+  }
+}
+/* desktop & tablet styles */
+@media screen and (min-width: 768px) {
+  .hide-menu {
+    display: block !important; /* override hidden navigation on large screens */
+  }
+  #menu-toggle-button {
+    display: none; /* hide hamburger button */
+  }
+  nav {
+    background: none;
+    left: auto;
+    right: 20px; /* use absolute positioning to push links to right side of container */
+    width: auto; /* reset width */
+    ul {
+      li {
+        display: inline-block; /* display links side by side */
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+/* ==========================================================================
      Helper classes
      ========================================================================== */
-  
-  /*
+
+/*
    * Hide visually and from screen readers
    */
-  
-  .hidden {
-    display: none !important;
-  }
-  
-  /*
+
+.hidden {
+  display: none !important;
+}
+
+/*
   * Hide only visually, but have it available for screen readers:
   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
   *
@@ -352,46 +396,46 @@
   *    causes content to wrap 1 word per line:
   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
   */
-  
-  .sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    /* 1 */
-  }
-  
-  /*
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
   * Extends the .sr-only class to allow the element
   * to be focusable when navigated to via the keyboard:
   * https://www.drupal.org/node/897638
   */
-  
-  .sr-only.focusable:active,
-  .sr-only.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    white-space: inherit;
-    width: auto;
-  }
-  
-  /*
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
   * Hide visually and from screen readers, but maintain layout
   */
-  
-  .invisible {
-    visibility: hidden;
-  }
-  
-  /*
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
   * Clearfix: contain floats
   *
   * For modern browsers
@@ -402,99 +446,97 @@
   * 2. The use of `table` rather than `block` is only necessary if using
   *    `:before` to contain the top-margins of child elements.
   */
-  
-  .clearfix:before,
-  .clearfix:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-  }
-  
-  .clearfix:after {
-    clear: both;
-  }
-  
-  /* ==========================================================================
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
      EXAMPLE Media Queries for Responsive Design.
      These examples override the primary ('mobile first') styles.
      Modify as content requires.
      ========================================================================== */
-  
-  @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-  }
-  
-  @media print,
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 1.25dppx),
-    (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-  }
-  
-  /* ==========================================================================
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
      Print styles.
      Inlined to avoid the additional HTTP request:
      https://www.phpied.com/delay-loading-your-print-css/
      ========================================================================== */
-  
-  @media print {
-    *,
-    *:before,
-    *:after {
-      background: transparent !important;
-      color: #000 !important;
-      /* Black prints faster */
-      box-shadow: none !important;
-      text-shadow: none !important;
-    }
-    a,
-    a:visited {
-      text-decoration: underline;
-    }
-    a[href]:after {
-      content: " (" attr(href) ")";
-    }
-    abbr[title]:after {
-      content: " (" attr(title) ")";
-    }
-    /*
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
        * Don't show links that are fragment identifiers,
        * or use the `javascript:` pseudo protocol
        */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-      content: "";
-    }
-    pre {
-      white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
-    }
-    /*
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
        * Printing Tables:
        * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
        */
-    thead {
-      display: table-header-group;
-    }
-    tr,
-    img {
-      page-break-inside: avoid;
-    }
-    p,
-    h2,
-    h3 {
-      orphans: 3;
-      widows: 3;
-    }
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
+  thead {
+    display: table-header-group;
   }
-  
-  
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
