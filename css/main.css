@@ -85,6 +85,7 @@ textarea {
   font-family: Poppins;
   src: url(/fonts/Poppins-Regular.ttf); }
 /* adjust top of sections to compensate for padding when jumping from section to section */
+/* buttons */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px; }
@@ -93,11 +94,35 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   margin: 0px !important; }
 
+p {
+  margin: 0px !important; }
+
 body {
   font-family: "Lato", sans-serif; }
 
 .content-wrapper {
   margin: 0px 20px; }
+
+.button-container {
+  margin: 25px 0px;
+  text-align: center; }
+  .button-container a:link,
+  .button-container a:visited {
+    background: #a9cf38;
+    border: 3px solid #a9cf38;
+    border-radius: 30px;
+    color: #003952;
+    font-family: "Poppins", sans-serif;
+    font-size: .90rem;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s background-color; }
+    .button-container a:link:hover,
+    .button-container a:visited:hover {
+      background: none;
+      transition: .3s background-color; }
 
 /* hamburger menu */
 header {
@@ -188,6 +213,7 @@ nav {
     #hero .hero-content h1 {
       font-size: 1.4rem;
       line-height: 1.65rem;
+      padding-top: 50px;
       text-align: center;
       text-transform: uppercase; }
       #hero .hero-content h1 span {
@@ -199,13 +225,66 @@ nav {
       text-align: center; }
       #hero .hero-content .hero-description p {
         line-height: 1.20rem;
-        padding-top: 5px; }
+        padding: 10px 0px; }
       #hero .hero-content .hero-description i {
         color: #fff;
-        padding-top: 30px; }
+        padding-top: 20px; }
         #hero .hero-content .hero-description i:hover {
           color: #a9cf38;
           transition: .3s color; }
+
+#volunteer {
+  color: #003952;
+  /* volunteer opportunities */ }
+  #volunteer h1 {
+    line-height: 1.75rem;
+    padding: 20px 0px;
+    text-align: center;
+    text-transform: uppercase; }
+    #volunteer h1 span {
+      font-weight: 300; }
+  #volunteer .volunteer-opp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* container for each opportunity */ }
+    #volunteer .volunteer-opp div {
+      text-align: center; }
+      #volunteer .volunteer-opp div h2 {
+        font-size: 1.25rem; }
+      #volunteer .volunteer-opp div h3 {
+        font-size: 1rem; }
+      #volunteer .volunteer-opp div img {
+        width: 250px;
+        height: auto;
+        padding: 10px 0px; }
+      #volunteer .volunteer-opp div:not(:nth-of-type(1)) {
+        padding-top: 20px; }
+  #volunteer .button-container {
+    padding-bottom: 20px; }
+
+#impact {
+  /* statistic/impact section */ }
+  #impact .volunteer-impact {
+    background: url("../img/impact-hero.png") center/cover;
+    color: #fff;
+    padding: 10px 0px; }
+    #impact .volunteer-impact h1 {
+      padding: 10px 0px;
+      text-align: center; }
+      #impact .volunteer-impact h1 span {
+        font-weight: 300; }
+    #impact .volunteer-impact .volunteer-stats {
+      padding-top: 10px; }
+      #impact .volunteer-impact .volunteer-stats h3 {
+        font-size: 3.5rem;
+        line-height: 2.5rem;
+        padding-top: 10px; }
+        #impact .volunteer-impact .volunteer-stats h3 span {
+          display: block;
+          font-size: 1.25rem;
+          font-weight: 300; }
 
 /* media queries for displaying our menu properly on large screens */
 @media screen and (min-width: 768px) {

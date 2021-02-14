@@ -106,11 +106,17 @@
     font-family: $heading-font;
     margin: 0px !important;
   }
+  p {
+    margin: 0px !important;
+  }
   body {
     font-family: $body-font;
   }
   .content-wrapper {
     margin: 0px 20px;
+  }
+  .button-container {
+    @include pill-button;
   }
   /* hamburger menu */ 
   header {
@@ -208,6 +214,7 @@
       h1 {
         font-size: 1.4rem;
         line-height: 1.65rem;
+        padding-top: 50px;
         text-align: center;
         text-transform: uppercase;
         span {
@@ -222,11 +229,11 @@
         text-align: center;
         p {
           line-height: 1.20rem;
-          padding-top: 5px;
+          padding: 10px 0px;
         }
         i {
           color: #fff;
-          padding-top: 30px;
+          padding-top: 20px;
           &:hover {
             color: $lime-green;
             transition: .3s color;
@@ -234,6 +241,74 @@
         }
       }
     }
+  }
+  #volunteer {
+    color: $dark-blue;
+    /* volunteer opportunities */ 
+    h1 {
+      line-height: 1.75rem;
+      padding: 20px 0px;
+      text-align: center;
+      text-transform: uppercase;
+      span {
+        font-weight: $light;
+      }
+    }
+    .volunteer-opp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* container for each opportunity */ 
+      div {
+        text-align: center;
+        h2 {
+          font-size: 1.25rem;
+        }
+        h3 {
+          font-size: 1rem;
+        }
+        img {
+          width: 250px;
+          height: auto;
+          padding: 10px 0px;
+        }
+        &:not(:nth-of-type(1)) {
+          padding-top: 20px;
+        }
+      }
+    }
+    .button-container {
+      padding-bottom: 20px;
+    }
+  }
+  #impact {
+        /* statistic/impact section */
+        .volunteer-impact {
+          background: url('../img/impact-hero.png') center / cover;
+          color: #fff;
+          padding: 10px 0px;
+          h1 {
+            padding: 10px 0px;
+            text-align: center;
+            span {
+              font-weight: $light;
+            }
+          }
+          .volunteer-stats {
+            padding-top: 10px;
+            h3 {
+              font-size: 3.5rem;
+              line-height: 2.5rem;
+              padding-top: 10px;
+              span {
+                display: block;
+                font-size: 1.25rem;
+                font-weight: $light;
+              }
+            }
+          }
+        }
   }
   /* media queries for displaying our menu properly on large screens */ 
   @media screen and (min-width: 768px) {
