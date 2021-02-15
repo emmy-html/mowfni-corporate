@@ -242,6 +242,56 @@ nav {
           color: #a9cf38;
           transition: 0.3s color; }
 
+#about article h2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding: 20px 0px;
+  text-align: left; }
+#about article p {
+  text-align: justify; }
+#about article:nth-of-type(2) {
+  background: #a9cf38;
+  color: #003952;
+  padding-bottom: 20px; }
+  #about article:nth-of-type(2) .button-container a:link,
+  #about article:nth-of-type(2) .button-container a:visited {
+    background: #00b5c2;
+    border: 3px solid #00b5c2;
+    transition: .3s background-color; }
+    #about article:nth-of-type(2) .button-container a:link:hover,
+    #about article:nth-of-type(2) .button-container a:visited:hover {
+      background: none;
+      border: 3px solid #003952;
+      transition: .3s background-color, .1s border-color; }
+
+/* statistic/impact section */
+#impact .volunteer-impact {
+  background: url("../img/impact-hero.png") center/cover;
+  color: #fff;
+  padding: 10px 0px; }
+  #impact .volunteer-impact h1 {
+    padding: 10px 0px;
+    text-align: left; }
+    #impact .volunteer-impact h1 span {
+      display: inline-block;
+      font-weight: 300; }
+  #impact .volunteer-impact .volunteer-stats {
+    padding-top: 10px; }
+    #impact .volunteer-impact .volunteer-stats h3 {
+      font-size: 3.5rem;
+      line-height: 2.5rem;
+      padding-top: 10px; }
+      #impact .volunteer-impact .volunteer-stats h3 span {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 300; }
+  #impact .volunteer-impact .button-container {
+    text-align: left; }
+    #impact .volunteer-impact .button-container a:link:hover,
+    #impact .volunteer-impact .button-container a:visited:hover {
+      border: 3px solid #fff;
+      color: #fff; }
+
 /* volunteer opportunities */
 #volunteer {
   color: #003952; }
@@ -279,34 +329,6 @@ nav {
       padding-bottom: 0px !important; }
   #volunteer .button-container {
     padding-bottom: 20px; }
-
-/* statistic/impact section */
-#impact .volunteer-impact {
-  background: url("../img/impact-hero.png") center/cover;
-  color: #fff;
-  padding: 10px 0px; }
-  #impact .volunteer-impact h1 {
-    padding: 10px 0px;
-    text-align: left; }
-    #impact .volunteer-impact h1 span {
-      display: inline-block;
-      font-weight: 300; }
-  #impact .volunteer-impact .volunteer-stats {
-    padding-top: 10px; }
-    #impact .volunteer-impact .volunteer-stats h3 {
-      font-size: 3.5rem;
-      line-height: 2.5rem;
-      padding-top: 10px; }
-      #impact .volunteer-impact .volunteer-stats h3 span {
-        display: block;
-        font-size: 1.25rem;
-        font-weight: 300; }
-  #impact .volunteer-impact .button-container {
-    text-align: left; }
-    #impact .volunteer-impact .button-container a:link:hover,
-    #impact .volunteer-impact .button-container a:visited:hover {
-      border: 3px solid #fff;
-      color: #fff; }
 
 /* partner spotlight */
 #spotlight h1 {

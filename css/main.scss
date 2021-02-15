@@ -253,6 +253,76 @@ nav {
     }
   }
 }
+#about {
+  article {
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      padding: 20px 0px;
+      text-align: left;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  article:nth-of-type(2) {
+    background: $lime-green;
+    color: $dark-blue;
+    padding-bottom: 20px;
+    .button-container {
+      a:link,
+      a:visited {
+        background: $light-blue;
+        border: 3px solid $light-blue;
+        transition: .3s background-color;
+        &:hover {
+          background: none;
+          border: 3px solid $dark-blue;
+          transition: .3s background-color, .1s border-color;
+        }
+      }
+    }
+  }
+}
+/* statistic/impact section */
+#impact {
+  .volunteer-impact {
+    background: url("../img/impact-hero.png") center / cover;
+    color: #fff;
+    padding: 10px 0px;
+    h1 {
+      padding: 10px 0px;
+      text-align: left;
+      span {
+        display: inline-block;
+        font-weight: $light;
+      }
+    }
+    .volunteer-stats {
+      padding-top: 10px;
+      h3 {
+        font-size: 3.5rem;
+        line-height: 2.5rem;
+        padding-top: 10px;
+        span {
+          display: block;
+          font-size: 1.25rem;
+          font-weight: $light;
+        }
+      }
+    }
+    .button-container {
+      text-align: left;
+      a:link,
+      a:visited {
+        &:hover {
+          border: 3px solid #fff;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 /* volunteer opportunities */
 #volunteer {
   color: $dark-blue;
@@ -302,45 +372,6 @@ nav {
   }
   .button-container {
     padding-bottom: 20px;
-  }
-}
-/* statistic/impact section */
-#impact {
-  .volunteer-impact {
-    background: url("../img/impact-hero.png") center / cover;
-    color: #fff;
-    padding: 10px 0px;
-    h1 {
-      padding: 10px 0px;
-      text-align: left;
-      span {
-        display: inline-block;
-        font-weight: $light;
-      }
-    }
-    .volunteer-stats {
-      padding-top: 10px;
-      h3 {
-        font-size: 3.5rem;
-        line-height: 2.5rem;
-        padding-top: 10px;
-        span {
-          display: block;
-          font-size: 1.25rem;
-          font-weight: $light;
-        }
-      }
-    }
-    .button-container {
-      text-align: left;
-      a:link,
-      a:visited {
-        &:hover {
-          border: 3px solid #fff;
-          color: #fff;
-        }
-      }
-    }
   }
 }
 /* partner spotlight */ 
