@@ -13,3 +13,13 @@ function hamburger() {
         hamburger.classList.add('fa-bars'); // replace it with the hamburger icon again
     }
 }
+// slideshow
+var slides = document.querySelectorAll('#slides-companies .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide() {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
