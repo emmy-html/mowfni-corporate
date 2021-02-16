@@ -112,6 +112,7 @@ h6 {
   margin: 0px !important;
 }
 h1 {
+  text-align: center;
   text-transform: uppercase;
   span {
     display: block;
@@ -228,7 +229,6 @@ nav {
       font-size: 1.4rem;
       line-height: 1.65rem;
       padding-top: 50px;
-      text-align: center;
       text-transform: uppercase;
       span {
         &:nth-of-type(2) {
@@ -352,7 +352,6 @@ nav {
   h1 {
     line-height: 1.75rem;
     padding: 20px 0px;
-    text-align: center;
     span {
       font-weight: $light;
     }
@@ -420,6 +419,41 @@ nav {
     .button-container.spotlight-button {
       margin: 10px 0px;
       padding-bottom: 20px;
+    }
+  }
+}
+/* frequently asked questions */ 
+#faq {
+  .content-wrapper {
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+      padding: 20px 0px;
+      span {
+        font-weight: $light;
+      }
+    }
+    h4 {
+      padding: 10px 0px;
+    }
+  }
+}
+/* footer */ 
+footer {
+  background: $dark-blue;
+  h3 {
+    color: $lime-green;
+    font-size: .95rem;
+    line-height: .90rem;
+    padding: 20px 0px;
+    text-transform: uppercase;
+    span {
+      display: block;
+      &:last-of-type {
+        color: #fff;
+        font-weight: $light;
+        padding-top: 2px;
+      }
     }
   }
 }

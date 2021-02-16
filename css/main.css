@@ -101,6 +101,7 @@ h6 {
   margin: 0px !important; }
 
 h1 {
+  text-align: center;
   text-transform: uppercase; }
   h1 span {
     display: block; }
@@ -227,7 +228,6 @@ nav {
       font-size: 1.4rem;
       line-height: 1.65rem;
       padding-top: 50px;
-      text-align: center;
       text-transform: uppercase; }
       #hero .hero-content h1 span:nth-of-type(2) {
         font-weight: 300; }
@@ -321,8 +321,7 @@ nav {
   color: #003952; }
   #volunteer h1 {
     line-height: 1.75rem;
-    padding: 20px 0px;
-    text-align: center; }
+    padding: 20px 0px; }
     #volunteer h1 span {
       font-weight: 300; }
   #volunteer .volunteer-opp {
@@ -388,6 +387,32 @@ nav {
 #spotlight .spotlight-partners .button-container.spotlight-button {
   margin: 10px 0px;
   padding-bottom: 20px; }
+
+/* frequently asked questions */
+#faq .content-wrapper h1 {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  padding: 20px 0px; }
+  #faq .content-wrapper h1 span {
+    font-weight: 300; }
+#faq .content-wrapper h4 {
+  padding: 10px 0px; }
+
+/* footer */
+footer {
+  background: #003952; }
+  footer h3 {
+    color: #a9cf38;
+    font-size: .95rem;
+    line-height: .90rem;
+    padding: 20px 0px;
+    text-transform: uppercase; }
+    footer h3 span {
+      display: block; }
+      footer h3 span:last-of-type {
+        color: #fff;
+        font-weight: 300;
+        padding-top: 2px; }
 
 /* desktop & tablet styles */
 @media screen and (min-width: 768px) {
