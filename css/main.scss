@@ -364,7 +364,7 @@ nav {
     align-items: center;
     justify-content: center;
     /* container for each opportunity */
-    div {
+    aside {
       @include grayscale-filter;
       text-align: center;
       h2 {
@@ -372,6 +372,7 @@ nav {
       }
       h3 {
         font-size: 1rem;
+        text-transform: uppercase;
       }
       &:not(:nth-of-type(1)) {
         padding-top: 20px;
@@ -525,6 +526,83 @@ footer {
         padding: 0px;
       }
     }
+  }
+  /* volunteer opportunities */ 
+  #volunteer {
+    h1 {
+      span {
+        display: inline-block;
+      }
+    }
+    .volunteer-opp {
+      flex-direction: row;
+      justify-content: space-around;
+      /* container for each opportunity */ 
+      aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 25%;
+        height: 450px;
+        transition: .3s background-color;
+        img {
+          width: 300px;
+        }
+        p {
+          text-align: justify;
+          padding: 5px 0px;
+          width: 300px;
+        }
+        &:not(:nth-of-type(1)) {
+          padding-top: 0px;
+        }
+        &:hover {
+          background: $lime-green;
+          transition: .3s background-color;
+          .button-container.volunteer-opp-button {
+            a:link,
+            a:visited {
+              background: $light-blue;
+              border: 3px solid $light-blue;
+              &:hover {
+                background: none;
+                border: 3px solid $dark-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* partner spotlight */
+  #spotlight {
+    .spotlight-partners {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      aside:nth-of-type(1) {
+        width: 40%;
+      }
+      aside:nth-of-type(2) {
+        width: 60%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+        .content-wrapper {
+          @include grayscale-filter;
+          width: 40%;
+        }
+      }
+    }
+  }
+  /* faq */ 
+  #faq {
+    margin: 0 auto;
+    width: 80%;
   }
 }
 /* ==========================================================================
