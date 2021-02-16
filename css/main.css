@@ -416,6 +416,7 @@ footer {
 
 /* desktop & tablet styles */
 @media screen and (min-width: 768px) {
+  /* header */
   .hide-menu {
     display: block !important;
     /* override hidden navigation on large screens */ }
@@ -435,7 +436,18 @@ footer {
       display: inline-block;
       /* display links side by side */
       margin-top: 10px;
-      margin-left: 20px; } }
+      margin-left: 20px; }
+
+  /* hero */
+  #hero {
+    height: 450px; }
+    #hero .hero-content h1 {
+      font-size: 2.25rem;
+      line-height: 2.10rem;
+      padding-top: 100px; }
+    #hero .hero-content .hero-description {
+      margin: 0 auto;
+      width: 400px; } }
 /* ==========================================================================
      Helper classes
      ========================================================================== */
