@@ -468,7 +468,12 @@ footer {
       position: absolute;
       width: 250px;
       left: 42%;
-      height: 500px; } }
+      height: 500px; }
+
+  /* impact */
+  #impact .volunteer-impact h1 {
+    font-size: 3rem;
+    padding: 0px; } }
 /* ==========================================================================
      Helper classes
      ========================================================================== */
