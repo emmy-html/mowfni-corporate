@@ -86,6 +86,7 @@ textarea {
   src: url(/fonts/Poppins-Regular.ttf); }
 /* adjust top of sections to compensate for padding when jumping from section to section */
 /* buttons */
+/* gray image filter */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px; }
@@ -108,6 +109,7 @@ p {
   margin: 0px !important; }
 
 body {
+  color: #003952;
   font-family: "Lato", sans-serif; }
 
 .content-wrapper {
@@ -123,16 +125,16 @@ body {
     border-radius: 30px;
     color: #003952;
     font-family: "Poppins", sans-serif;
-    font-size: .90rem;
+    font-size: 0.9rem;
     font-weight: bold;
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
-    transition: .3s background-color; }
+    transition: 0.3s background-color; }
     .button-container a:link:hover,
     .button-container a:visited:hover {
       background: none;
-      transition: .3s background-color; }
+      transition: 0.3s background-color; }
 
 /* hamburger menu */
 header {
@@ -331,22 +333,22 @@ nav {
     /* container for each opportunity */ }
     #volunteer .volunteer-opp div {
       text-align: center; }
-      #volunteer .volunteer-opp div h2 {
-        font-size: 1.25rem; }
-      #volunteer .volunteer-opp div h3 {
-        font-size: 1rem; }
       #volunteer .volunteer-opp div img {
         -webkit-filter: grayscale(100%);
         filter: grayscale(100%);
         width: 250px;
         height: auto;
         padding: 10px 0px;
-        transition: .3s filter; }
-      #volunteer .volunteer-opp div:not(:nth-of-type(1)) {
-        padding-top: 20px; }
+        transition: 0.3s filter; }
       #volunteer .volunteer-opp div:hover img {
         filter: none;
-        transition: .3s filter; }
+        transition: 0.3s filter; }
+      #volunteer .volunteer-opp div h2 {
+        font-size: 1.25rem; }
+      #volunteer .volunteer-opp div h3 {
+        font-size: 1rem; }
+      #volunteer .volunteer-opp div:not(:nth-of-type(1)) {
+        padding-top: 20px; }
     #volunteer .volunteer-opp .button-container.volunteer-opp-button {
       padding-bottom: 0px !important; }
   #volunteer .button-container {
@@ -354,11 +356,38 @@ nav {
 
 /* partner spotlight */
 #spotlight h1 {
+  font-size: 1.75rem;
   line-height: 1.75rem;
   padding: 20px 0px;
   text-align: center; }
   #spotlight h1 span {
     font-weight: 300; }
+#spotlight .spotlight-partners aside:nth-of-type(1) img {
+  width: 100%; }
+#spotlight .spotlight-partners aside:not(:nth-of-type(1)) {
+  padding: 10px 0px; }
+  #spotlight .spotlight-partners aside:not(:nth-of-type(1)) img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    width: 250px;
+    height: auto;
+    padding: 10px 0px;
+    transition: 0.3s filter; }
+  #spotlight .spotlight-partners aside:not(:nth-of-type(1)):hover img {
+    filter: none;
+    transition: 0.3s filter; }
+  #spotlight .spotlight-partners aside:not(:nth-of-type(1)) .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #spotlight .spotlight-partners aside:not(:nth-of-type(1)) .content-wrapper h2, #spotlight .spotlight-partners aside:not(:nth-of-type(1)) .content-wrapper h3 {
+      font-size: 1rem; }
+    #spotlight .spotlight-partners aside:not(:nth-of-type(1)) .content-wrapper h3 {
+      font-weight: 300; }
+#spotlight .spotlight-partners .button-container.spotlight-button {
+  margin: 10px 0px;
+  padding-bottom: 20px; }
 
 /* desktop & tablet styles */
 @media screen and (min-width: 768px) {

@@ -121,6 +121,7 @@ p {
   margin: 0px !important;
 }
 body {
+  color: $dark-blue;
   font-family: $body-font;
 }
 .content-wrapper {
@@ -363,6 +364,7 @@ nav {
     justify-content: center;
     /* container for each opportunity */
     div {
+      @include grayscale-filter;
       text-align: center;
       h2 {
         font-size: 1.25rem;
@@ -370,22 +372,8 @@ nav {
       h3 {
         font-size: 1rem;
       }
-      img {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-        width: 250px;
-        height: auto;
-        padding: 10px 0px;
-        transition: .3s filter;
-      }
       &:not(:nth-of-type(1)) {
         padding-top: 20px;
-      }
-      &:hover {
-        img {
-          filter: none;
-          transition: .3s filter;
-        }
       }
     }
     .button-container.volunteer-opp-button {
@@ -399,11 +387,39 @@ nav {
 /* partner spotlight */ 
 #spotlight {
   h1 {
+    font-size: 1.75rem;
     line-height: 1.75rem;
     padding: 20px 0px;
     text-align: center;
     span {
       font-weight: $light;
+    }
+  }
+  .spotlight-partners {
+    aside:nth-of-type(1) {
+      img {
+        width: 100%;
+      }
+    }
+    aside:not(:nth-of-type(1)) {
+      @include grayscale-filter;
+      padding: 10px 0px;
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2, h3 {
+          font-size: 1rem;
+        }
+        h3 {
+          font-weight: $light;
+        }
+      }
+    }
+    .button-container.spotlight-button {
+      margin: 10px 0px;
+      padding-bottom: 20px;
     }
   }
 }
