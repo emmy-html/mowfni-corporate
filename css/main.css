@@ -279,13 +279,15 @@ nav {
   padding-bottom: 20px; }
   #about article:nth-of-type(2) .button-container a:link,
   #about article:nth-of-type(2) .button-container a:visited {
-    background: #00b5c2;
-    border: 3px solid #00b5c2;
+    background: #003952;
+    border: 3px solid #003952;
+    color: #a9cf38;
     transition: .3s background-color; }
     #about article:nth-of-type(2) .button-container a:link:hover,
     #about article:nth-of-type(2) .button-container a:visited:hover {
       background: none;
       border: 3px solid #003952;
+      color: #003952;
       transition: .3s background-color, .1s border-color; }
 
 /* statistic/impact section */
@@ -447,7 +449,26 @@ footer {
       padding-top: 100px; }
     #hero .hero-content .hero-description {
       margin: 0 auto;
-      width: 400px; } }
+      width: 400px; }
+
+  /* about */
+  #about {
+    background: url("../img/about-hero.png") center/cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 450px; }
+    #about article:nth-of-type(1) {
+      width: 40%; }
+    #about article:nth-of-type(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 250px;
+      left: 42%;
+      height: 500px; } }
 /* ==========================================================================
      Helper classes
      ========================================================================== */
