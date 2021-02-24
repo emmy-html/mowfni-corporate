@@ -560,7 +560,7 @@ footer {
       display: none; }
 
 /* desktop & tablet styles */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   /* header */
   .hide-menu {
     display: block !important;
@@ -725,7 +725,7 @@ footer {
     #volunteer-page .volunteer-page-hero h1 {
       font-size: 2.5rem;
       line-height: 2.35rem;
-      padding-top: 250px; }
+      padding-top: 230px; }
   #volunteer-page .volunteer-page-opportunities {
     position: absolute;
     top: 450px; }
