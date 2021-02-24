@@ -124,6 +124,16 @@ p {
 body {
   color: $dark-blue;
   font-family: $body-font;
+  /* default soft fade in animation */
+  animation: fadeIn .3s linear 0s 1;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 .content-wrapper {
   margin: 0px 20px;
@@ -464,15 +474,8 @@ footer {
 #gift-matching {
   background: url("../img/gift-matching-hero.png") center / cover;
   .content-wrapper:nth-of-type(1) {
+    @include page-header;
     margin: 0px !important;
-    h1 {
-      background: $light-blue;
-      line-height: 1.75rem;
-      padding: 5px;
-      span {
-        font-weight: $light;
-      }
-    }
   }
   article {
     .content-wrapper {
@@ -490,6 +493,17 @@ footer {
           width: 100%;
         }
       }
+    }
+  }
+}
+/* volunteer page */ 
+#volunteer-page {
+  @include page-header;
+  .volunteer-page-opportunities {
+    @include volunteer-container;
+    margin: 30px 0px;
+    p {
+      padding: 0px 5px;
     }
   }
 }
@@ -600,6 +614,7 @@ footer {
         &:hover {
           background: $lime-green;
           transition: .3s background-color;
+          transition: .3s height;
           .button-container.volunteer-opp-button {
             a:link,
             a:visited {
@@ -613,6 +628,9 @@ footer {
           }
         }
       }
+    }
+    .button-container.view-all {
+      padding: 5px 0px;
     }
   }
   /* partner spotlight */
@@ -648,6 +666,7 @@ footer {
   #gift-matching {
     min-height: 700px;
     article {
+      margin-top: 30px;
       max-width: 900px;
       .content-wrapper {
         display: flex;

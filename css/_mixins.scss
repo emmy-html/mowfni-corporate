@@ -42,3 +42,85 @@
     }
   }
 }
+/* page title */ 
+@mixin page-header {
+  h1 {
+    background: $light-blue;
+    line-height: 1.75rem;
+    padding: 5px;
+    width: 100%;
+    span {
+      font-weight: $light;
+    }
+  }
+}
+/* volunteer opportunities */ 
+@mixin volunteer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* container for each opportunity */
+  aside {
+    @include grayscale-filter;
+    text-align: center;
+    h2 {
+      font-size: 1.25rem;
+    }
+    h3 {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    &:not(:nth-of-type(1)) {
+      padding-top: 20px;
+    }
+  }
+  .button-container.volunteer-opp-button {
+    padding-bottom: 0px !important;
+  }
+  @media screen and (min-width: 768px) {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /* container for each opportunity */ 
+    aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: 25%;
+      height: 450px;
+      transition: .3s background-color;
+      img {
+        width: 300px;
+      }
+      p {
+        text-align: justify;
+        padding: 5px 0px;
+        width: 300px;
+      }
+      &:not(:nth-of-type(1)) {
+        padding-top: 0px;
+      }
+      &:hover {
+        background: $lime-green;
+        transition: .3s background-color;
+        transition: .3s height;
+        .button-container.volunteer-opp-button {
+          a:link,
+          a:visited {
+            background: $light-blue;
+            border: 3px solid $light-blue;
+            &:hover {
+              background: none;
+              border: 3px solid $dark-blue;
+            }
+          }
+        }
+      }
+    }
+    .button-container.view-all {
+      padding: 5px 0px;
+    }
+  }
+}
