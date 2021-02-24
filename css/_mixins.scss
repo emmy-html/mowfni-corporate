@@ -44,11 +44,11 @@
 }
 /* page title */ 
 @mixin page-header {
+  width: 100%;
   h1 {
     background: $light-blue;
     line-height: 1.75rem;
     padding: 5px;
-    width: 100%;
     span {
       font-weight: $light;
     }
