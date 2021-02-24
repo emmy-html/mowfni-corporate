@@ -517,6 +517,12 @@ footer {
       left: 42%;
       height: 500px;
     }
+    article .content-wrapper {
+      h2 {
+        font-size: 2rem;
+        line-height: 2.10rem;
+      }
+    }
   }
   /* impact */ 
   #impact {
@@ -602,6 +608,7 @@ footer {
   /* faq */ 
   #faq {
     margin: 0 auto;
+    padding: 30px;
     width: 80%;
   }
 }

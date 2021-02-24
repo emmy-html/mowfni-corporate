@@ -470,6 +470,9 @@ footer {
       width: 250px;
       left: 42%;
       height: 500px; }
+    #about article .content-wrapper h2 {
+      font-size: 2rem;
+      line-height: 2.10rem; }
 
   /* impact */
   #impact .volunteer-impact h1 {
@@ -542,6 +545,7 @@ footer {
   /* faq */
   #faq {
     margin: 0 auto;
+    padding: 30px;
     width: 80%; } }
 /* ==========================================================================
      Helper classes
