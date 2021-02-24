@@ -460,6 +460,39 @@ footer {
     }
   }
 }
+/* gift matching page */
+#gift-matching {
+  background: url("../img/gift-matching-hero.png") center / cover;
+  .content-wrapper:nth-of-type(1) {
+    margin: 0px !important;
+    h1 {
+      background: $light-blue;
+      line-height: 1.75rem;
+      padding: 5px;
+      span {
+        font-weight: $light;
+      }
+    }
+  }
+  article {
+    .content-wrapper {
+      padding: 10px;
+      h2 {
+        line-height: 1.5rem;
+      }
+      p {
+        padding: 5px 0px;
+      }
+      .iframe-container {
+        padding: 10px;
+        iframe {
+          height: 450px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 /* desktop & tablet styles */
 @media screen and (min-width: 768px) {
   /* header */
@@ -610,6 +643,36 @@ footer {
     margin: 0 auto;
     padding: 30px;
     width: 80%;
+  }
+  /* gift matching */
+  #gift-matching {
+    min-height: 700px;
+    article {
+      max-width: 900px;
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        h2 {
+          line-height: 2rem;
+        }
+        p {
+          background: #fff;
+          width: 50%;
+          padding: 10px;
+          text-align: justify;
+        }
+        .iframe-container {
+          width: 70%;
+          iframe {
+            height: 500px;
+            border: none;
+          }
+        }
+      }
+    }
   }
 }
 /* ==========================================================================
