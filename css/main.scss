@@ -500,10 +500,11 @@ footer {
 #volunteer-page {
   .volunteer-page-hero {
     background: url("../img/volunteer-hero.png") top / cover no-repeat;
-    height: 250px;
+    height: 400px;
     h1 {
-      line-height: 1.65rem;
-      padding-top: 170px;
+      font-size: 1.5rem;
+      line-height: 1.55rem;
+      padding-top: 190px;
       span {
         display: block;
         font-weight: $light;
@@ -512,11 +513,20 @@ footer {
   }
   .volunteer-page-opportunities {
     @include volunteer-container;
+    background: transparent;
     margin-bottom: 10px;
+    position: absolute;
+    top: 375px;
     p {
       padding: 0px 5px;
     }
   }
+}
+footer#volunteer-page-footer {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  margin-top: 2200px;
 }
 /* activity page */
 #activity-page {
@@ -558,6 +568,40 @@ footer {
     .activity-hero {
       display: none;
     }
+  }
+}
+/* single partner page */ 
+#single-partner-page-hero {
+  @include page-header;
+  article {
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 80%;
+        padding: 10px 0px;
+      }
+      p {
+        padding: 10px 0px;
+        text-align: justify;
+        span {
+          font-family: $heading-font;
+          font-weight: bold;
+        }
+      }
+      h2 {
+        font-weight: $light;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+#single-partner-page-work {
+  @include page-header;
+  .single-partner-page-work-container {
+    @include volunteer-container;
   }
 }
 /* desktop & tablet styles */
@@ -764,9 +808,7 @@ footer {
   }
   footer#volunteer-page-footer {
     position: absolute;
-    z-index: 100;
-    width: 100%;
-    margin-top: 500px;
+    margin-top: 500px !important;
   }
   /* activity page */ 
   #activity-page {
@@ -802,6 +844,36 @@ footer {
         position: absolute;
         z-index: -10;
       }
+    }
+  }
+  /* single partner page */
+  #single-partner-page-hero {
+    article {
+      margin: 0 auto;
+      width: 70%;
+      .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        img {
+          width: 250px;
+          padding-right: 30px;
+          height: auto;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+        p {
+          padding-top: 0px impor !important;
+        }
+      }
+    }
+  }
+  #single-partner-page-work {
+    .single-partner-page-work-container {
+      padding: 20px;
     }
   }
 }

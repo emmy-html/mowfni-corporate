@@ -87,7 +87,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 10px;
+      padding: 10px !important;
       width: 25%;
       height: 450px;
       transition: .3s background-color;
@@ -98,9 +98,6 @@
         text-align: justify;
         padding: 5px 0px;
         width: 300px;
-      }
-      &:not(:nth-of-type(1)) {
-        padding-top: 0px;
       }
       &:hover {
         background: $lime-green;
