@@ -93,6 +93,8 @@
       transition: .3s background-color;
       img {
         width: 300px;
+        height: 180px;
+        object-fit: cover;
       }
       p {
         text-align: justify;

@@ -506,7 +506,9 @@ footer {
         height: 450px;
         transition: .3s background-color; }
         #volunteer-page .volunteer-page-opportunities aside img {
-          width: 300px; }
+          width: 300px;
+          height: 180px;
+          object-fit: cover; }
         #volunteer-page .volunteer-page-opportunities aside p {
           text-align: justify;
           padding: 5px 0px;
@@ -644,7 +646,9 @@ footer#volunteer-page-footer {
           height: 450px;
           transition: .3s background-color; }
           #single-partner-page-work .single-partner-page-work-container aside img {
-            width: 300px; }
+            width: 300px;
+            height: 180px;
+            object-fit: cover; }
           #single-partner-page-work .single-partner-page-work-container aside p {
             text-align: justify;
             padding: 5px 0px;
@@ -663,6 +667,18 @@ footer#volunteer-page-footer {
                 border: 3px solid #003952; }
         #single-partner-page-work .single-partner-page-work-container .button-container.view-all {
           padding: 5px 0px; } }
+
+/* single partner event page */
+#single-partner-event-page-hero {
+  width: 100%; }
+  #single-partner-event-page-hero h1 {
+    background: #00b5c2;
+    line-height: 1.75rem;
+    padding: 5px; }
+    #single-partner-event-page-hero h1 span {
+      font-weight: 300; }
+  #single-partner-event-page-hero .single-event-page-hero-container {
+    padding: 10px; }
 
 /* desktop & tablet styles */
 @media screen and (min-width: 992px) {
@@ -791,6 +807,10 @@ footer#volunteer-page-footer {
         #spotlight .spotlight-partners aside:nth-of-type(2) .content-wrapper:hover img {
           filter: none;
           transition: 0.3s filter; }
+        #spotlight .spotlight-partners aside:nth-of-type(2) .content-wrapper img {
+          width: 300px;
+          height: 150px;
+          object-fit: cover; }
 
   /* faq */
   #faq {
@@ -886,7 +906,29 @@ footer#volunteer-page-footer {
         padding-top: 0px impor !important; }
 
   #single-partner-page-work .single-partner-page-work-container {
-    padding: 20px; } }
+    padding: 20px; }
+
+  /* single partner event page */
+  #single-partner-event-page-hero {
+    width: 100%; }
+    #single-partner-event-page-hero h1 {
+      background: #00b5c2;
+      line-height: 1.75rem;
+      padding: 5px; }
+      #single-partner-event-page-hero h1 span {
+        font-weight: 300; }
+    #single-partner-event-page-hero .single-event-page-hero-container {
+      display: flex;
+      flex-flow: row-reverse nowrap;
+      height: 600px; }
+      #single-partner-event-page-hero .single-event-page-hero-container aside:nth-of-type(1) {
+        background-image: linear-gradient(transparent, white), url("../img/aetna-page/volunteer_02.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 100%; }
+      #single-partner-event-page-hero .single-event-page-hero-container .content-wrapper {
+        width: 50%;
+        text-align: justify; } }
 /* ==========================================================================
      Helper classes
      ========================================================================== */
