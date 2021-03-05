@@ -605,10 +605,36 @@ footer#volunteer-page-footer {
   }
 }
 /* single partner event page */ 
-#single-partner-event-page-hero {
+#single-partner-event-page {
   @include page-header;
-  .single-event-page-hero-container {
-    padding: 10px;
+  h1 {
+    span {
+      display: inline-block;
+    }
+  }
+  .single-partner-event-page-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .single-event-page-info {
+    aside:nth-of-type(1) {
+      background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1)), url('../img/aetna-page/volunteer_02.jpg');
+      background-position: top;
+      background-size: cover;
+      width: 100%;
+      height: 200px;
+    }
+    h2 {
+      span {
+        font-weight: $light;
+        &:after {
+          content: ' \2022 ';
+        }
+      }
+    }
+    p {
+      padding-bottom: 10px;
+    }
   }
 }
 /* desktop & tablet styles */
@@ -891,20 +917,22 @@ footer#volunteer-page-footer {
     }
   }
   /* single partner event page */ 
-  #single-partner-event-page-hero {
+  #single-partner-event-page {
     @include page-header;
-    .single-event-page-hero-container {
+    .single-partner-event-page-wrapper {
       display: flex;
-      flex-flow: row-reverse nowrap;
+      flex-direction: row;
+    }
+    .single-partner-event-page-slideshow {
+      width: 100%;
+    }
+    .single-event-page-info {
+      width: 50%;
       height: 600px;
       aside:nth-of-type(1) {
-        background-image: linear-gradient(transparent, white), url('../img/aetna-page/volunteer_02.jpg');
-        background-position: center;
-        background-size: cover;
-        width: 100%;
+        height: 300px;
       }
       .content-wrapper {
-        width: 50%;
         text-align: justify;
       }
     }

@@ -669,16 +669,31 @@ footer#volunteer-page-footer {
           padding: 5px 0px; } }
 
 /* single partner event page */
-#single-partner-event-page-hero {
+#single-partner-event-page {
   width: 100%; }
-  #single-partner-event-page-hero h1 {
+  #single-partner-event-page h1 {
     background: #00b5c2;
     line-height: 1.75rem;
     padding: 5px; }
-    #single-partner-event-page-hero h1 span {
+    #single-partner-event-page h1 span {
       font-weight: 300; }
-  #single-partner-event-page-hero .single-event-page-hero-container {
-    padding: 10px; }
+  #single-partner-event-page h1 span {
+    display: inline-block; }
+  #single-partner-event-page .single-partner-event-page-wrapper {
+    display: flex;
+    flex-direction: column; }
+  #single-partner-event-page .single-event-page-info aside:nth-of-type(1) {
+    background-image: linear-gradient(to bottom, transparent, white), url("../img/aetna-page/volunteer_02.jpg");
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 200px; }
+  #single-partner-event-page .single-event-page-info h2 span {
+    font-weight: 300; }
+    #single-partner-event-page .single-event-page-info h2 span:after {
+      content: ' \2022 '; }
+  #single-partner-event-page .single-event-page-info p {
+    padding-bottom: 10px; }
 
 /* desktop & tablet styles */
 @media screen and (min-width: 992px) {
@@ -909,25 +924,25 @@ footer#volunteer-page-footer {
     padding: 20px; }
 
   /* single partner event page */
-  #single-partner-event-page-hero {
+  #single-partner-event-page {
     width: 100%; }
-    #single-partner-event-page-hero h1 {
+    #single-partner-event-page h1 {
       background: #00b5c2;
       line-height: 1.75rem;
       padding: 5px; }
-      #single-partner-event-page-hero h1 span {
+      #single-partner-event-page h1 span {
         font-weight: 300; }
-    #single-partner-event-page-hero .single-event-page-hero-container {
+    #single-partner-event-page .single-partner-event-page-wrapper {
       display: flex;
-      flex-flow: row-reverse nowrap;
+      flex-direction: row; }
+    #single-partner-event-page .single-partner-event-page-slideshow {
+      width: 100%; }
+    #single-partner-event-page .single-event-page-info {
+      width: 50%;
       height: 600px; }
-      #single-partner-event-page-hero .single-event-page-hero-container aside:nth-of-type(1) {
-        background-image: linear-gradient(transparent, white), url("../img/aetna-page/volunteer_02.jpg");
-        background-position: center;
-        background-size: cover;
-        width: 100%; }
-      #single-partner-event-page-hero .single-event-page-hero-container .content-wrapper {
-        width: 50%;
+      #single-partner-event-page .single-event-page-info aside:nth-of-type(1) {
+        height: 300px; }
+      #single-partner-event-page .single-event-page-info .content-wrapper {
         text-align: justify; } }
 /* ==========================================================================
      Helper classes
