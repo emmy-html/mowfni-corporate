@@ -651,8 +651,8 @@ footer#volunteer-page-footer {
     }
   }
   .corporate-partner-page-hero {
-    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1)), url('../img/corporate-partner-hero.png') center / cover;
-    height: 200px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1)), url('../img/corporate-partner-hero.png') top / cover;
+    height: 250px;
   }
   .corporate-partner-page-view-all {
     display: flex;
@@ -952,8 +952,14 @@ footer#volunteer-page-footer {
   }
   #corporate-partner-page {
     .corporate-partner-page-hero {
-      background-position: top;
-      height: 600px;
+      height: 350px;
+    }
+    .corporate-partner-page-view-all {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 90%;
+      margin: 0 auto;
     }
   }
 }
