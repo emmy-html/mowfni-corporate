@@ -121,6 +121,17 @@ body {
     opacity: 0; }
   to {
     opacity: 1; } }
+  body p a:link,
+  body p a:visited {
+    border-bottom: 3px solid #a9cf38;
+    color: #003952;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s all; }
+    body p a:link:hover,
+    body p a:visited:hover {
+      border-bottom: 3px solid #00b5c2; }
+
 .content-wrapper {
   margin: 0px 20px; }
 
@@ -876,7 +887,11 @@ footer#volunteer-page-footer {
   #faq {
     margin: 0 auto;
     padding: 30px;
-    width: 80%; }
+    width: 60%; }
+    #faq .content-wrapper h4 {
+      font-size: 1.25rem; }
+    #faq .content-wrapper .more-questions {
+      text-align: center; }
 
   /* gift matching */
   #gift-matching {

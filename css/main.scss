@@ -134,6 +134,19 @@ body {
       opacity: 1;
     }
   }
+  p {
+    a:link,
+    a:visited {
+      border-bottom: 3px solid $lime-green;
+      color: $dark-blue;
+      font-weight: bold;
+      text-decoration: none;
+      transition: .3s all;
+      &:hover {
+        border-bottom: 3px solid $light-blue;
+      }
+    }
+  }
 }
 .content-wrapper {
   margin: 0px 20px;
@@ -790,7 +803,15 @@ footer#volunteer-page-footer {
   #faq {
     margin: 0 auto;
     padding: 30px;
-    width: 80%;
+    width: 60%;
+    .content-wrapper {
+      h4 {
+        font-size: 1.25rem;
+      }
+      .more-questions {
+        text-align: center;
+      }
+    }
   }
   /* gift matching */
   #gift-matching {
