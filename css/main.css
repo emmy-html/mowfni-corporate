@@ -515,15 +515,14 @@ footer {
           width: 300px; }
         #volunteer-page .volunteer-page-opportunities aside:hover {
           background: #a9cf38;
-          transition: .3s background-color;
-          transition: .3s height; }
+          transition: .3s all; }
           #volunteer-page .volunteer-page-opportunities aside:hover .button-container.volunteer-opp-button a:link,
           #volunteer-page .volunteer-page-opportunities aside:hover .button-container.volunteer-opp-button a:visited {
-            background: #00b5c2;
-            border: 3px solid #00b5c2; }
+            background: #a9cf38;
+            border: 3px solid #003952; }
             #volunteer-page .volunteer-page-opportunities aside:hover .button-container.volunteer-opp-button a:link:hover,
             #volunteer-page .volunteer-page-opportunities aside:hover .button-container.volunteer-opp-button a:visited:hover {
-              background: none;
+              background: #fff;
               border: 3px solid #003952; }
       #volunteer-page .volunteer-page-opportunities .button-container.view-all {
         padding: 5px 0px; } }
@@ -584,14 +583,26 @@ footer#volunteer-page-footer {
     justify-content: center;
     align-items: center; }
     #single-partner-page-hero article .content-wrapper img {
-      width: 80%;
+      width: 50%;
       padding: 10px 0px; }
     #single-partner-page-hero article .content-wrapper p {
-      padding: 10px 0px;
+      padding: 2px 0px;
       text-align: justify; }
       #single-partner-page-hero article .content-wrapper p span {
         font-family: "Poppins", sans-serif;
-        font-weight: bold; }
+        font-weight: bold;
+        text-transform: uppercase; }
+        #single-partner-page-hero article .content-wrapper p span a:link,
+        #single-partner-page-hero article .content-wrapper p span a:visited {
+          border-bottom: 3px solid #a9cf38;
+          color: #003952;
+          text-decoration: none; }
+          #single-partner-page-hero article .content-wrapper p span a:link:hover,
+          #single-partner-page-hero article .content-wrapper p span a:visited:hover {
+            border-bottom: 3px solid #00b5c2;
+            transition: .3s all; }
+      #single-partner-page-hero article .content-wrapper p:last-of-type {
+        padding-bottom: 10px; }
     #single-partner-page-hero article .content-wrapper h2 {
       font-weight: 300;
       text-transform: uppercase; }
@@ -655,18 +666,19 @@ footer#volunteer-page-footer {
             width: 300px; }
           #single-partner-page-work .single-partner-page-work-container aside:hover {
             background: #a9cf38;
-            transition: .3s background-color;
-            transition: .3s height; }
+            transition: .3s all; }
             #single-partner-page-work .single-partner-page-work-container aside:hover .button-container.volunteer-opp-button a:link,
             #single-partner-page-work .single-partner-page-work-container aside:hover .button-container.volunteer-opp-button a:visited {
-              background: #00b5c2;
-              border: 3px solid #00b5c2; }
+              background: #a9cf38;
+              border: 3px solid #003952; }
               #single-partner-page-work .single-partner-page-work-container aside:hover .button-container.volunteer-opp-button a:link:hover,
               #single-partner-page-work .single-partner-page-work-container aside:hover .button-container.volunteer-opp-button a:visited:hover {
-                background: none;
+                background: #fff;
                 border: 3px solid #003952; }
         #single-partner-page-work .single-partner-page-work-container .button-container.view-all {
           padding: 5px 0px; } }
+    #single-partner-page-work .single-partner-page-work-container aside {
+      padding: 10px; }
 
 /* single partner event page */
 #single-partner-event-page {
@@ -694,6 +706,10 @@ footer#volunteer-page-footer {
       content: ' \2022 '; }
   #single-partner-event-page .single-event-page-info p {
     padding-bottom: 10px; }
+  #single-partner-event-page .single-partner-event-page-slideshow aside img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; }
 
 /* desktop & tablet styles */
 @media screen and (min-width: 992px) {
@@ -908,20 +924,26 @@ footer#volunteer-page-footer {
     #single-partner-page-hero article .content-wrapper {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
-      padding: 20px; }
+      padding: 20px;
+      width: 100%; }
       #single-partner-page-hero article .content-wrapper img {
         width: 250px;
-        padding-right: 30px;
         height: auto; }
       #single-partner-page-hero article .content-wrapper h2 {
         font-size: 2rem; }
       #single-partner-page-hero article .content-wrapper p {
         padding-top: 0px impor !important; }
+      #single-partner-page-hero article .content-wrapper aside {
+        width: 400px; }
+        #single-partner-page-hero article .content-wrapper aside .button-container {
+          text-align: left; }
 
   #single-partner-page-work .single-partner-page-work-container {
-    padding: 20px; }
+    padding: 15px; }
+    #single-partner-page-work .single-partner-page-work-container aside {
+      height: 320px; }
 
   /* single partner event page */
   #single-partner-event-page {
@@ -939,11 +961,17 @@ footer#volunteer-page-footer {
       width: 100%; }
     #single-partner-event-page .single-event-page-info {
       width: 50%;
-      height: 600px; }
+      height: 650px; }
       #single-partner-event-page .single-event-page-info aside:nth-of-type(1) {
         height: 300px; }
       #single-partner-event-page .single-event-page-info .content-wrapper {
-        text-align: justify; } }
+        text-align: justify;
+        padding-top: 25px; }
+    #single-partner-event-page .single-partner-event-page-slideshow aside {
+      height: 100%; }
+      #single-partner-event-page .single-partner-event-page-slideshow aside img {
+        height: 100%;
+        object-fit: cover; } }
 /* ==========================================================================
      Helper classes
      ========================================================================== */

@@ -580,15 +580,29 @@ footer#volunteer-page-footer {
       justify-content: center;
       align-items: center;
       img {
-        width: 80%;
+        width: 50%;
         padding: 10px 0px;
       }
       p {
-        padding: 10px 0px;
+        padding: 2px 0px;
         text-align: justify;
         span {
           font-family: $heading-font;
           font-weight: bold;
+          text-transform: uppercase;
+          a:link,
+          a:visited {
+            border-bottom: 3px solid $lime-green;
+            color: $dark-blue;
+            text-decoration: none;
+            &:hover {
+              border-bottom: 3px solid $light-blue;
+              transition: .3s all;
+            }
+          }
+        }
+        &:last-of-type {
+          padding-bottom: 10px;
         }
       }
       h2 {
@@ -602,6 +616,9 @@ footer#volunteer-page-footer {
   @include page-header;
   .single-partner-page-work-container {
     @include volunteer-container;
+    aside {
+      padding: 10px;
+    }
   }
 }
 /* single partner event page */ 
@@ -634,6 +651,15 @@ footer#volunteer-page-footer {
     }
     p {
       padding-bottom: 10px;
+    }
+  }
+  .single-partner-event-page-slideshow {
+    aside {
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -894,12 +920,12 @@ footer#volunteer-page-footer {
       .content-wrapper {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         padding: 20px;
+        width: 100%;
         img {
           width: 250px;
-          padding-right: 30px;
           height: auto;
         }
         h2 {
@@ -908,12 +934,21 @@ footer#volunteer-page-footer {
         p {
           padding-top: 0px impor !important;
         }
+        aside {
+          width: 400px;
+          .button-container {
+            text-align: left;
+          }
+        }
       }
     }
   }
   #single-partner-page-work {
     .single-partner-page-work-container {
-      padding: 20px;
+      padding: 15px;
+      aside {
+        height: 320px;
+      }
     }
   }
   /* single partner event page */ 
@@ -928,12 +963,22 @@ footer#volunteer-page-footer {
     }
     .single-event-page-info {
       width: 50%;
-      height: 600px;
+      height: 650px;
       aside:nth-of-type(1) {
         height: 300px;
       }
       .content-wrapper {
         text-align: justify;
+        padding-top: 25px;
+      }
+    }
+    .single-partner-event-page-slideshow {
+      aside {
+        height: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }

@@ -103,15 +103,14 @@
       }
       &:hover {
         background: $lime-green;
-        transition: .3s background-color;
-        transition: .3s height;
+        transition: .3s all;
         .button-container.volunteer-opp-button {
           a:link,
           a:visited {
-            background: $light-blue;
-            border: 3px solid $light-blue;
+            background: $lime-green;
+            border: 3px solid $dark-blue;
             &:hover {
-              background: none;
+              background: #fff;
               border: 3px solid $dark-blue;
             }
           }
