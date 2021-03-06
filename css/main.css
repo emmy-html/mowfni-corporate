@@ -361,6 +361,41 @@ nav {
         padding-top: 20px; }
     #volunteer .volunteer-opp .button-container.volunteer-opp-button {
       padding-bottom: 0px !important; }
+    @media screen and (min-width: 768px) {
+      #volunteer .volunteer-opp {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        /* container for each opportunity */ }
+        #volunteer .volunteer-opp aside {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px !important;
+          width: 25%;
+          height: 450px;
+          transition: .3s background-color; }
+          #volunteer .volunteer-opp aside img {
+            width: 300px;
+            height: 180px;
+            object-fit: cover; }
+          #volunteer .volunteer-opp aside p {
+            text-align: justify;
+            padding: 5px 0px;
+            width: 300px; }
+          #volunteer .volunteer-opp aside:hover {
+            background: #a9cf38;
+            transition: .3s all; }
+            #volunteer .volunteer-opp aside:hover .button-container.volunteer-opp-button a:link,
+            #volunteer .volunteer-opp aside:hover .button-container.volunteer-opp-button a:visited {
+              background: #a9cf38;
+              border: 3px solid #003952; }
+              #volunteer .volunteer-opp aside:hover .button-container.volunteer-opp-button a:link:hover,
+              #volunteer .volunteer-opp aside:hover .button-container.volunteer-opp-button a:visited:hover {
+                background: #fff;
+                border: 3px solid #003952; }
+        #volunteer .volunteer-opp .button-container.view-all {
+          padding: 5px 0px; } }
   #volunteer .button-container {
     padding-bottom: 20px; }
 
@@ -711,6 +746,35 @@ footer#volunteer-page-footer {
     height: 400px;
     object-fit: cover; }
 
+/* view all corporate partner page */
+#corporate-partner-page {
+  width: 100%; }
+  #corporate-partner-page h1 {
+    background: #00b5c2;
+    line-height: 1.75rem;
+    padding: 5px; }
+    #corporate-partner-page h1 span {
+      font-weight: 300; }
+  #corporate-partner-page h1 span {
+    display: inline-block; }
+  #corporate-partner-page .corporate-partner-page-hero {
+    background: linear-gradient(to bottom, transparent, white), url("../img/corporate-partner-hero.png") center/cover;
+    height: 200px; }
+  #corporate-partner-page .corporate-partner-page-view-all {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px; }
+    #corporate-partner-page .corporate-partner-page-view-all aside {
+      text-align: center;
+      padding-bottom: 15px; }
+      #corporate-partner-page .corporate-partner-page-view-all aside img {
+        width: 200px;
+        height: 120px;
+        object-fit: contain; }
+      #corporate-partner-page .corporate-partner-page-view-all aside h2 {
+        font-weight: 300;
+        font-size: 2rem; }
+
 /* desktop & tablet styles */
 @media screen and (min-width: 992px) {
   /* header */
@@ -776,39 +840,6 @@ footer#volunteer-page-footer {
   /* volunteer opportunities */
   #volunteer h1 span {
     display: inline-block; }
-  #volunteer .volunteer-opp {
-    flex-direction: row;
-    justify-content: space-around;
-    /* container for each opportunity */ }
-    #volunteer .volunteer-opp aside {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      width: 25%;
-      height: 450px;
-      transition: .3s background-color; }
-      #volunteer .volunteer-opp aside img {
-        width: 300px; }
-      #volunteer .volunteer-opp aside p {
-        text-align: justify;
-        padding: 5px 0px;
-        width: 300px; }
-      #volunteer .volunteer-opp aside:not(:nth-of-type(1)) {
-        padding-top: 0px; }
-      #volunteer .volunteer-opp aside:hover {
-        background: #a9cf38;
-        transition: .3s background-color;
-        transition: .3s height; }
-        #volunteer .volunteer-opp aside:hover .button-container.volunteer-opp-button a:link,
-        #volunteer .volunteer-opp aside:hover .button-container.volunteer-opp-button a:visited {
-          background: #00b5c2;
-          border: 3px solid #00b5c2; }
-          #volunteer .volunteer-opp aside:hover .button-container.volunteer-opp-button a:link:hover,
-          #volunteer .volunteer-opp aside:hover .button-container.volunteer-opp-button a:visited:hover {
-            background: none;
-            border: 3px solid #003952; }
   #volunteer .button-container.view-all {
     padding: 5px 0px; }
 
@@ -971,7 +1002,11 @@ footer#volunteer-page-footer {
       height: 100%; }
       #single-partner-event-page .single-partner-event-page-slideshow aside img {
         height: 100%;
-        object-fit: cover; } }
+        object-fit: cover; }
+
+  #corporate-partner-page .corporate-partner-page-hero {
+    background-position: top;
+    height: 600px; } }
 /* ==========================================================================
      Helper classes
      ========================================================================== */

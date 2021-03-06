@@ -369,28 +369,7 @@ nav {
     }
   }
   .volunteer-opp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* container for each opportunity */
-    aside {
-      @include grayscale-filter;
-      text-align: center;
-      h2 {
-        font-size: 1.25rem;
-      }
-      h3 {
-        font-size: 1rem;
-        text-transform: uppercase;
-      }
-      &:not(:nth-of-type(1)) {
-        padding-top: 20px;
-      }
-    }
-    .button-container.volunteer-opp-button {
-      padding-bottom: 0px !important;
-    }
+    @include volunteer-container;
   }
   .button-container {
     padding-bottom: 20px;
@@ -663,6 +642,37 @@ footer#volunteer-page-footer {
     }
   }
 }
+/* view all corporate partner page */ 
+#corporate-partner-page {
+  @include page-header;
+  h1 {
+    span {
+      display: inline-block;
+    }
+  }
+  .corporate-partner-page-hero {
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1)), url('../img/corporate-partner-hero.png') center / cover;
+    height: 200px;
+  }
+  .corporate-partner-page-view-all {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    aside {
+      text-align: center;
+      padding-bottom: 15px;
+      img {
+        width: 200px;
+        height: 120px;
+        object-fit: contain;
+      }
+      h2 {
+        font-weight: $light;
+        font-size: 2rem;
+      }
+    }
+  }
+}
 /* desktop & tablet styles */
 @media screen and (min-width: 992px) {
   /* header */
@@ -741,48 +751,6 @@ footer#volunteer-page-footer {
     h1 {
       span {
         display: inline-block;
-      }
-    }
-    .volunteer-opp {
-      flex-direction: row;
-      justify-content: space-around;
-      /* container for each opportunity */ 
-      aside {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        width: 25%;
-        height: 450px;
-        transition: .3s background-color;
-        img {
-          width: 300px;
-        }
-        p {
-          text-align: justify;
-          padding: 5px 0px;
-          width: 300px;
-        }
-        &:not(:nth-of-type(1)) {
-          padding-top: 0px;
-        }
-        &:hover {
-          background: $lime-green;
-          transition: .3s background-color;
-          transition: .3s height;
-          .button-container.volunteer-opp-button {
-            a:link,
-            a:visited {
-              background: $light-blue;
-              border: 3px solid $light-blue;
-              &:hover {
-                background: none;
-                border: 3px solid $dark-blue;
-              }
-            }
-          }
-        }
       }
     }
     .button-container.view-all {
@@ -980,6 +948,12 @@ footer#volunteer-page-footer {
           object-fit: cover;
         }
       }
+    }
+  }
+  #corporate-partner-page {
+    .corporate-partner-page-hero {
+      background-position: top;
+      height: 600px;
     }
   }
 }
