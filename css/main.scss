@@ -354,10 +354,12 @@ nav {
     .volunteer-stats {
       padding-top: 10px;
       h3 {
+        color: $lime-green;
         font-size: 3.5rem;
         line-height: 2.5rem;
         padding-top: 10px;
         span {
+          color: #fff;
           display: block;
           font-size: 1.25rem;
           font-weight: $light;
@@ -758,9 +760,29 @@ footer#volunteer-page-footer {
   /* impact */ 
   #impact {
     .volunteer-impact {
+      height: 500px;
       h1 {
-        font-size: 3rem;
+        font-size: 3.75rem;
         padding: 0px;
+      }
+      aside {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 30px !important;
+        h3 {
+          font-size: 5rem !important;
+          line-height: 3.5rem !important;
+          padding-top: 20px !important;
+          width: 50%;
+          span {
+            font-size: 1.75rem !important;
+          }
+          &:nth-of-type(even) {
+            text-align: right;
+          }
+        }
       }
     }
   }
