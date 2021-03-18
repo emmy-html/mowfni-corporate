@@ -499,8 +499,15 @@ footer {
 
 /* volunteer page */
 #volunteer-page .volunteer-page-hero {
+  /* volunteer landing page */
   background: url("../img/volunteer-hero.png") top/cover no-repeat;
   height: 400px; }
+  #volunteer-page .volunteer-page-hero .button-container.volunteer-landing {
+    margin-top: 0px !important;
+    padding-top: 30px; }
+    #volunteer-page .volunteer-page-hero .button-container.volunteer-landing a:link,
+    #volunteer-page .volunteer-page-hero .button-container.volunteer-landing a:visited {
+      margin: 0px 5px; }
   #volunteer-page .volunteer-page-hero h1 {
     font-size: 1.5rem;
     line-height: 1.55rem;
@@ -942,9 +949,21 @@ footer#volunteer-page-footer {
             border: none; }
 
   /* volunteer page */
+  #volunteer-page .volunteer-page-hero.volunteer-landing {
+    height: 600px;
+    background-size: 100%; }
+    #volunteer-page .volunteer-page-hero.volunteer-landing h1 {
+      padding-top: 400px; }
   #volunteer-page .volunteer-page-hero {
+    /* volunteer landing page */
     background-size: contain;
     height: 830px; }
+    #volunteer-page .volunteer-page-hero .button-container.volunteer-landing {
+      margin-top: 0px !important;
+      padding-top: 30px; }
+      #volunteer-page .volunteer-page-hero .button-container.volunteer-landing a:link,
+      #volunteer-page .volunteer-page-hero .button-container.volunteer-landing a:visited {
+        margin: 0px 5px; }
     #volunteer-page .volunteer-page-hero h1 {
       font-size: 2.5rem;
       line-height: 2.35rem;

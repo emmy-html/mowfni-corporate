@@ -497,6 +497,15 @@ footer {
 /* volunteer page */ 
 #volunteer-page {
   .volunteer-page-hero {
+    /* volunteer landing page */ 
+    .button-container.volunteer-landing {
+      margin-top: 0px !important;
+      padding-top: 30px;
+      a:link,
+      a:visited {
+        margin: 0px 5px;
+      }
+    }
     background: url("../img/volunteer-hero.png") top / cover no-repeat;
     height: 400px;
     h1 {
@@ -875,7 +884,23 @@ footer#volunteer-page-footer {
   }
   /* volunteer page */ 
   #volunteer-page {
+    .volunteer-page-hero.volunteer-landing {
+      height: 600px;
+      background-size: 100%;
+      h1 {
+        padding-top: 400px;
+      }
+    }
     .volunteer-page-hero {
+    /* volunteer landing page */ 
+      .button-container.volunteer-landing {
+        margin-top: 0px !important;
+        padding-top: 30px;
+        a:link,
+        a:visited {
+          margin: 0px 5px;
+        }
+      }
       background-size: contain;
       height: 830px;
       h1 {
